@@ -1,0 +1,2 @@
+class InstitutionalController < ApplicationController
+end
