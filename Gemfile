@@ -1,5 +1,22 @@
 source 'https://rubygems.org'
 
+# Custom Gems
+gem 'devise'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views' # adiciona o thema do bootstrap 3 nas page views
+gem 'friendly_id'
+gem 'devise-async'
+gem 'bootstrap-sass', '~> 3.3.0'
+gem 'font-awesome-sass', '~> 4.2.0'
+gem 'paperclip'
+gem 'bootstrap_form'
+
+
+group :development do
+	gem 'thin'
+	gem 'quiet_assets'
+end	
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
