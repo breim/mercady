@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Supermercado</th>
+      <th>Localização</th>
+      <th>Estado</th>
+      <th>Cidade</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @markets.each do |market| %>
+    <tr>
+      <td><%= link_to market.name,market %></td>
+      <td><%= market.address %></td>
+      <td><%= market.state %></td>
+      <td><%= market.city %></td>
+      <td><%= link_to "<i class='fa fa-trash-o'></i>".html_safe, market, method: :delete, data: { confirm: 'Você tem certeza ?' } if current_user %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
