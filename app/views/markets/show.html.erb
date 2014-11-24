@@ -25,5 +25,5 @@
   <%= @market.longitude %>
 </p>
 
-<%= link_to 'Edit', edit_market_path(@market) %> |
-<%= link_to 'Back', markets_path %>
+<%= link_to 'Edit', edit_market_path(@market),data: {no_turbolink: true} %> |
+<%= link_to 'Voltar', :back %>

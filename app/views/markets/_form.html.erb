@@ -1,37 +1,47 @@
-<%= form_for(@market) do |f| %>
-  <% if @market.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@market.errors.count, "error") %> prohibited this market from being saved:</h2>
+<%= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=pt-BR" %>
 
-      <ul>
-      <% @market.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%=  bootstrap_form_for(@market) do |f|  %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :cnpj %><br>
-    <%= f.text_field :cnpj %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<% if @market.errors.any? %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  <h4><%= pluralize(@market.errors.count, "erro") %> no fomulário:</h4>
+  <ul>
+    <% @market.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
 <% end %>
+
+<div class="field">
+  <%= f.text_field :name %>
+</div>
+
+<div class="field">
+  <%= f.text_field :cnpj %>
+</div>
+
+<div class="field">
+  <%= f.text_field :phone %>
+</div>
+
+<div class="field">
+  <%= f.text_field :address %>
+</div>
+
+<div class="pull-right">
+  <%= f.submit "Salvar",:class => "btn btn-primary btn-lg" %>
+</div>
+
+<% end %>
+<script>
+$(document).ready(function(){
+  var autocomplete = new google.maps.places.Autocomplete($("#market_address")[0], {country: 'BR'});
+}) 
+$("#market_address").on("keypress", function (e) {
+  if (e.keyCode == 13) {
+    return false;
+  }
+});
+</script>
