@@ -1,0 +1,45 @@
+<%= render 'navbars/navbar_institutional' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+
+      <% flash.each do |name, msg| %>
+      <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :section, msg, :id => "flash_#{name}", :class => "flash" %>
+      </div>
+      <% end %>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Entrar</div>
+
+        <div class="panel-body">
+          <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :lembrar %>
+          </div>
+          <% end -%>
+
+          <div class="actions">
+            <%= f.submit "Log in" %>
+          </div>
+          <% end %>
+          <%= render "users/shared/links" %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
