@@ -1,10 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "rails_bootstrap_forms";
 @import "nprogress";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "nprogress-bootstrap";
 @import "navbar_institutional";
 @import "institutional";
 
 body{
 	margin-top:70px;
+	background-color: #f0f0f0;
+}
+
+.user-container{
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+
 }
