@@ -218,6 +218,11 @@ pt-BR:
         description: "A descrição da vaga"
       company:
         description: "A descrição"
+      market:
+        name: "Nome do mercado"
+        cnpj: "CNPJ"
+        address: "Endereço"
+        phone: "Telefone"
   helpers:
     page_entries_info:
       more_pages:
