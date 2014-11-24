@@ -11,6 +11,7 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'nprogress-rails'
 gem 'paperclip'
 gem 'bootstrap_form'
+gem 'geocoder'
 
 
 group :development do
