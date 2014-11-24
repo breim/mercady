@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  resources :markets
+  resources :markets, path: :mercados
 
-  devise_for :users
+  devise_for :users, path: :usuarios
+
+  resources :system, path: :sistema do
+     collection do
+        get 'markets'
+     end
+   end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
