@@ -11,20 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124041320) do
+ActiveRecord::Schema.define(version: 20141124213706) do
 
   create_table "markets", force: true do |t|
     t.string   "name"
-    t.string   "cnpj",       limit: 14
+    t.string   "cnpj",               limit: 14
     t.string   "address"
-    t.float    "latitude",   limit: 24
-    t.float    "longitude",  limit: 24
+    t.float    "latitude",           limit: 24
+    t.float    "longitude",          limit: 24
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "city"
     t.string   "state"
     t.string   "phone"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.string   "slug"
+    t.string   "email"
   end
 
   add_index "markets", ["user_id"], name: "index_markets_on_user_id", using: :btree
