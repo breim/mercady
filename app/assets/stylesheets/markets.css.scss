@@ -1,3 +1,26 @@
 // Place all the styles related to the markets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.form-logo{
+	max-width: 120px;
+}
+
+#directions {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top:50px;
+  z-index: 0;
+}
+
+#contactform {
+  margin-top:180px;
+  position: relative;
+  z-index: 1;
+}
+
+.img-logo{
+	margin-top:-30px;
+}

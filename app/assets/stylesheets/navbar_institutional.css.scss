@@ -1,54 +1,41 @@
 .navbar-institutional {
-  background-color: #ffffff;
-  border-color: #eeeeee;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(white), to(white));
-  background-image: -webkit-linear-gradient(top, white, 0%, white, 100%);
-  background-image: -moz-linear-gradient(top, white 0%, white 100%);
-  background-image: linear-gradient(to bottom, white 0%, white 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+  background-color: #3f83bf;
+  border-color: #3772a6;
   .navbar-brand {
-    color: #9e9e9e;
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    color: #fff04d;
     &:hover, &:focus {
-      color: #858585;
+      color: #fff04d;
       background-color: transparent;
     }
   }
   .navbar-text {
-    color: #9e9e9e;
+    color: #ffffff;
   }
   .navbar-nav > {
     li {
       &:last-child > a {
-        border-right: 1px solid #eeeeee;
+        border-right: 1px solid #3772a6;
       }
       > a {
-        color: #9e9e9e;
-        border-left: 1px solid #eeeeee;
+        color: #ffffff;
+        border-left: 1px solid #3772a6;
         &:hover, &:focus {
-          color: #656565;
+          color: #c0c0c0;
           background-color: transparent;
         }
       }
     }
     .active > a {
-      color: #656565;
-      background-color: #eeeeee;
-      background-image: -webkit-gradient(linear, left 0%, left 100%, from(#eeeeee), to(white));
-      background-image: -webkit-linear-gradient(top, #eeeeee, 0%, white, 100%);
-      background-image: -moz-linear-gradient(top, #eeeeee 0%, white 100%);
-      background-image: linear-gradient(to bottom, #eeeeee 0%, white 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffffffff', GradientType=0);
+      color: #c0c0c0;
+      background-color: #3772a6;
       &:hover, &:focus {
-        color: #656565;
-        background-color: #eeeeee;
-        background-image: -webkit-gradient(linear, left 0%, left 100%, from(#eeeeee), to(white));
-        background-image: -webkit-linear-gradient(top, #eeeeee, 0%, white, 100%);
-        background-image: -moz-linear-gradient(top, #eeeeee 0%, white 100%);
-        background-image: linear-gradient(to bottom, #eeeeee 0%, white 100%);
-        background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffffffff', GradientType=0);
+        color: #c0c0c0;
+        background-color: #3772a6;
       }
     }
     .disabled > a {
@@ -70,36 +57,36 @@
     }
   }
   .navbar-collapse, .navbar-form {
-    border-color: #ededed;
+    border-color: #3671a4;
   }
   .navbar-nav > {
     .dropdown > a {
       &:hover .caret, &:focus .caret {
-        border-top-color: #656565;
-        border-bottom-color: #656565;
+        border-top-color: #c0c0c0;
+        border-bottom-color: #c0c0c0;
       }
     }
     .open > a {
-      background-color: #eeeeee;
-      color: #656565;
+      background-color: #3772a6;
+      color: #c0c0c0;
       &:hover, &:focus {
-        background-color: #eeeeee;
-        color: #656565;
+        background-color: #3772a6;
+        color: #c0c0c0;
       }
       .caret, &:hover .caret, &:focus .caret {
-        border-top-color: #656565;
-        border-bottom-color: #656565;
+        border-top-color: #c0c0c0;
+        border-bottom-color: #c0c0c0;
       }
     }
     .dropdown > a .caret {
-      border-top-color: #9e9e9e;
-      border-bottom-color: #9e9e9e;
+      border-top-color: #ffffff;
+      border-bottom-color: #ffffff;
     }
   }
   .navbar-link {
-    color: #9e9e9e;
+    color: #ffffff;
     &:hover {
-      color: #656565;
+      color: #c0c0c0;
     }
   }
 }
@@ -107,18 +94,18 @@
 @media (max-width: 767) {
   .navbar-institutional .navbar-nav .open .dropdown-menu > {
     li > a {
-      color: #9e9e9e;
+      color: #ffffff;
       &:hover, &:focus {
-        color: #656565;
+        color: #c0c0c0;
         background-color: transparent;
       }
     }
     .active > a {
-      color: #656565;
-      background-color: #eeeeee;
+      color: #c0c0c0;
+      background-color: #3772a6;
       &:hover, &:focus {
-        color: #656565;
-        background-color: #eeeeee;
+        color: #c0c0c0;
+        background-color: #3772a6;
       }
     }
     .disabled > a {

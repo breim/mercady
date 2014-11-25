@@ -1,12 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
-@import "nprogress";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+$nprogress-color: #fff04d;
+@import "nprogress";
 @import "nprogress-bootstrap";
 @import "navbar_institutional";
 @import "institutional";
+@import "markets";
 
 body{
 	margin-top:70px;
