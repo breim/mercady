@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views' # adiciona o thema do bootstrap 3 nas page views
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.0.0'
 gem 'devise-async'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'font-awesome-sass', '~> 4.2.0'
@@ -12,6 +12,7 @@ gem 'nprogress-rails'
 gem 'paperclip'
 gem 'bootstrap_form'
 gem 'geocoder'
+gem 'gmaps4rails'
 
 
 group :development do
