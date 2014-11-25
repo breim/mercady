@@ -1,6 +1,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th></th>
       <th>Supermercado</th>
       <th>Localização</th>
       <th>Estado</th>
@@ -12,6 +13,7 @@
   <tbody>
     <% @markets.each do |market| %>
     <tr>
+      <td><%= link_to (image_tag market.image.url(:thumb),:class => 'img-responsive company-logo'),market%></td>
       <td><%= link_to market.name,market %></td>
       <td><%= market.address %></td>
       <td><%= market.state %></td>

@@ -14,6 +14,17 @@
 </div>
 <% end %>
 
+
+<div class="row">
+  <div class="col-lg-2 col-md-3 col-sm-3">
+    <%= image_tag(@market.image.url(:small),:class => "form-logo") %> 
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-4">
+    <p class="form-control-static"><%= f.file_field :image, :class=> "required" %></p>
+    <p class="help-block"> Arquivos suportados JPG,JPGE e PNG.</p>
+  </div>
+</div>
+
 <div class="field">
   <%= f.text_field :name %>
 </div>
@@ -24,6 +35,11 @@
 
 <div class="field">
   <%= f.text_field :phone %>
+</div>
+
+
+<div class="field">
+  <%= f.email_field :email %>
 </div>
 
 <div class="field">
