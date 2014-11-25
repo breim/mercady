@@ -26,12 +26,11 @@ class MarketsController < ApplicationController
     @market.user_id = current_user.id
     @market.save
     respond_with(@market,:location => markets_system_index_path, notice: 'Mercado criado com sucesso.')
-
   end
 
   def update
     @market.update(market_params)
-    redirect_to markets_system_index_path, notice: 'Mercado atualizado com sucesso.'
+    respond_with(@market,:location => markets_system_index_path, notice: 'Mercado atualizado com sucesso.')
   end
 
   def destroy
@@ -40,18 +39,18 @@ class MarketsController < ApplicationController
   end
 
   private
-    def set_market
-      @market = Market.find(params[:id])
-    end
+  def set_market
+    @market = Market.friendly.find(params[:id])
+  end
 
-    def is_owner
-      if current_user && @market.user_id == current_user.id
-      else
-        redirect_to root_path, notice: 'Você não está logado ou não é dono do supermercado para realizar esta ação.'
-      end
+  def is_owner
+    if current_user && @market.user_id == current_user.id
+    else
+      redirect_to root_path, notice: 'Você não está logado ou não é dono do supermercado para realizar esta ação.'
     end
+  end
 
-    def market_params
-      params.require(:market).permit(:name, :cnpj, :address, :latitude, :longitude, :city, :state, :phone)
-    end
+  def market_params
+    params.require(:market).permit(:name, :cnpj, :address, :latitude, :longitude, :city, :state, :phone, :image,:email)
+  end
 end
