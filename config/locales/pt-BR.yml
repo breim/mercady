@@ -223,6 +223,7 @@ pt-BR:
         cnpj: "CNPJ"
         address: "Endereço"
         phone: "Telefone"
+        image: "Logo do mercado"
   helpers:
     page_entries_info:
       more_pages:
