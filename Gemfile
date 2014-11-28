@@ -13,6 +13,8 @@ gem 'paperclip'
 gem 'bootstrap_form'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'impressionist'
+gem 'shareable'
 
 
 group :development do

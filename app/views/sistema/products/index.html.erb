@@ -1,0 +1,56 @@
+<%= render 'navbars/navbar_institutional' %>
+<div class="container">
+  <% if notice.present? %>
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <%= notice %>
+  </div>
+  <% end %>
+  <div class="row">
+    <%= render 'menus/lateral_users' %>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+      <div class="user-container">
+        <div class="pull-right">
+          <%= link_to "<i class='fa fa-plus-circle'></i> Novo Produto".html_safe,  new_sistema_product_path , :class => "btn btn-success" %>
+        </div>
+        <h4>Meus produtos</h4>
+        <hr>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Mercado</th>
+              <th>Preço</th>
+              <th>Atualizado</th>
+              <th>Criado</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @products.each do |product| %>
+            <tr>
+              <td></td>
+              <td><%= link_to (image_tag product.image.url(:thumb),:class => 'img-responsive company-logo'),product%></td>
+              <td><%= link_to product.name,product %></td>
+              <td><%= product.market.name %></td>
+              <td><%= product.price %></td>
+              <td><%= distance_of_time_in_words(product.updated_at, Time.now,options = {}) %></td> 
+              <td><%= distance_of_time_in_words(product.created_at, Time.now,options = {}) %></td> 
+              <td><%= link_to "<i class='fa fa-edit'></i>".html_safe,edit_sistema_product_path(product) %></td>
+              <td><%= link_to "<i class='fa fa-trash-o'></i>".html_safe,sistema_product_path(product), method: :delete, data: { confirm: 'Você tem certeza ?' } %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

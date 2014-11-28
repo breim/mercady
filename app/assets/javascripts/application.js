@@ -13,8 +13,9 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+
 //= require nprogress
 //= require nprogress-turbolinks
 //= require gmaps/google
+//= require autoNumeric
 //= require_tree .

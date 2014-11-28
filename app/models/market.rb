@@ -1,5 +1,13 @@
 class Market < ActiveRecord::Base
 
+	#Gem Impressonist
+	is_impressionable
+
+	# Relations
+	belongs_to :user
+	has_many :products
+
+
 	# Validations
 	validates :address, presence: true
 	validates :cnpj, presence: true
@@ -25,9 +33,11 @@ class Market < ActiveRecord::Base
 	after_validation :geocode, :if => :address_changed?
 
 
+	# Gem PaperClip
 	has_attached_file :image, :styles => {
 		:large => "512x512" ,
 		:medium => "360x360" ,
+		:profile => "190x190",
 		:small => "110x110",
 		:thumb => "50x50",
 		:tiny => "30x30"

@@ -1,3 +1,31 @@
 // Place all the styles related to the institutional controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.background{
+	background-color: #428bca;
+}
+
+.intro{
+		h1{
+			font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+			font-size: 8em;
+			margin-bottom:30px;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			transition: all .3s;
+			color: #fff04d;
+			float: center;
+		}
+		h3{
+			font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+			font-size: 5em;
+			margin-bottom:30px;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			transition: all .3s;
+			color: #fff04d;
+			float: center;
+		}
+}

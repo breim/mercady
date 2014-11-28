@@ -1,8 +1,23 @@
-<%= render 'navbars/navbar_institutional' %>
+<body class="background"></body>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-12">
-			<%= link_to "oi", teste_path %>
+		<div class="col-sm-12">
+			<div class="intro hidden-xs">
+				<div class="text-center"><h1>Mercady</h1></div>	
+			</div>
+			<div class="intro hidden-sm hidden-lg hidden-md">
+				<div class="text-center"><h3>Mercady</h3></div>	
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="input-group">
+						<%= text_field_tag :query, params[:query], class: "form-control input-lg ", id: "busca" ,:name => "q",:placeholder => "Buscar" %>
+						<div class="input-group-btn">
+							<button class="btn btn-default input-lg" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

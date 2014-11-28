@@ -210,20 +210,18 @@ pt-BR:
         password: "Senha"
         name: "Nome"
         password_confirmation: "Confirmação da senha"
-      vocation:
-        contact_email: "Email de contato"
-        name: "O título da vaga"
-        company_id: "A empresa da vaga"
-        location: "O local da vaga"
-        description: "A descrição da vaga"
-      company:
-        description: "A descrição"
       market:
         name: "Nome do mercado"
         cnpj: "CNPJ"
         address: "Endereço"
         phone: "Telefone"
         image: "Logo do mercado"
+      product:
+        name: "Nome do produto"
+        description: "Descrição"
+        price: "Preço"
+        image: "Foto do produto"
+        market_id: "Mercado do produto"
   helpers:
     page_entries_info:
       more_pages:

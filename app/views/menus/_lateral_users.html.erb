@@ -5,8 +5,9 @@
 		</div>
 		<div class="panel-body">
 			<ul class="nav nav-pills nav-stacked" role="tablist">
-				<li class="<%= is_active?(system_index_path) %>"><%= link_to "<i class='fa fa-home'></i> Home".html_safe,system_index_path %></li>
-				<li class="<%= is_active?(markets_system_index_path) %>"><%= link_to "<i class='fa fa-shopping-cart'></i> Meus supermercados".html_safe, markets_system_index_path %></li>						
+				<li class="<%= is_active?(sistema_system_index_path) %>"><%= link_to "<i class='fa fa-home'></i> Home".html_safe,sistema_system_index_path %></li>
+				<li class="<%= is_active?(sistema_markets_path) %>"><%= link_to "<i class='fa fa-shopping-cart'></i> Meus supermercados".html_safe, sistema_markets_path %></li>						
+				<li class="<%= is_active?(sistema_products_path) %>"><%= link_to "<i class='fa fa-cubes'></i> Meus produtos".html_safe, sistema_products_path %></li>
 			</ul>
 		</div>
 	</div>

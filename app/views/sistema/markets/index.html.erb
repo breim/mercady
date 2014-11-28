@@ -1,0 +1,48 @@
+<%= render 'navbars/navbar_institutional' %>
+<div class="container">
+	<% if notice.present? %>
+	<div class="alert alert-info alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<%= notice %>
+	</div>
+	<% end %>
+	<div class="row">
+		<%= render 'menus/lateral_users' %>
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+			<div class="user-container">
+				<div class="pull-right">
+					<%= link_to "<i class='fa fa-plus-circle'></i> Novo Mercado".html_safe,  new_sistema_market_path , :class => "btn btn-success" %>
+				</div>
+				<h4>Meus supermercados</h4>
+				<hr>
+				<table class="table">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Supermercado</th>
+							<th>Localização</th>
+							<th>Estado</th>
+							<th>Cidade</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<% @markets.each do |market| %>
+						<tr>
+							<td><%= link_to (image_tag market.image.url(:thumb),:class => 'img-responsive company-logo'),market%></td>
+							<td><%= link_to market.name,market %></td>
+							<td><%= market.address %></td>
+							<td><%= market.state %></td>
+							<td><%= market.city %></td>
+							<td><%= link_to "<i class='fa fa-edit'></i>".html_safe,edit_sistema_market_path(market) %></td>
+							<td><%= link_to "<i class='fa fa-trash-o'></i>".html_safe, sistema_market_path(market), method: :delete, data: { confirm: 'Você tem certeza ?' } if current_user %></td>
+						</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

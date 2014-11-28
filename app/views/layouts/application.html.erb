@@ -15,6 +15,11 @@
   <![endif]-->
 </head>
 <body>
-	<%= yield %>
+<%= yield %>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">© Mercady | <%= link_to icon('github'),root_path,:class => 'text-muted' %> </p>
+  </div>
+</footer>
 </body>
 </html>

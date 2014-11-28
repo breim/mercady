@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
   	case resource
   	when User
-  		then system_index_path
+  		then sistema_system_index_path 
   	else 
   		root_path
   	end

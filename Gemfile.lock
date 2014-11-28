@@ -67,7 +67,11 @@ GEM
     geocoder (1.2.6)
     gmaps4rails (2.1.2)
     hike (1.2.3)
+    httpclient (2.4.0)
     i18n (0.6.11)
+    impressionist (1.5.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
     jbuilder (2.2.5)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -81,9 +85,12 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mini_portile (0.6.0)
     minitest (5.4.3)
     multi_json (1.10.1)
     mysql2 (0.3.17)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     nprogress-rails (0.1.6.3)
     orm_adapter (0.5.0)
     paperclip (4.2.0)
@@ -125,6 +132,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shareable (1.1.4)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     spring (1.2.0)
     sprockets (2.11.3)
       hike (~> 1.2)
@@ -166,6 +176,7 @@ DEPENDENCIES
   friendly_id (~> 5.0.0)
   geocoder
   gmaps4rails
+  impressionist
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -176,6 +187,7 @@ DEPENDENCIES
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  shareable
   spring
   thin
   turbolinks
