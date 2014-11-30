@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  match '/buscar' => 'markets#index', :as => :buscar,via: [:get]
+  
   resources :products, path: :produtos
 
   resources :markets, path: :mercados
