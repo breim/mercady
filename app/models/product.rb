@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 	# Relations
 	belongs_to :user
-	belongs_to :market
+	belongs_to :market, :counter_cache => true
 
 	# Validation betches
 	validates_length_of :name, :in => 4..100

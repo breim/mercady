@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127000515) do
+ActiveRecord::Schema.define(version: 20141130013706) do
 
   create_table "impressions", force: true do |t|
     t.string   "impressionable_type"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20141127000515) do
     t.integer  "image_file_size"
     t.string   "slug"
     t.string   "email"
+    t.integer  "products_count",                default: 0
   end
 
   add_index "markets", ["user_id"], name: "index_markets_on_user_id", using: :btree
