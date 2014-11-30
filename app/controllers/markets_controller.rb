@@ -5,8 +5,14 @@ class MarketsController < ApplicationController
   respond_to :html
 
   def index
-    @markets = Market.all
-    respond_with(@markets)
+    if params[:busca]
+      @markets = Market.near(params[:busca],6,:units => :km).order('distance').take(10)
+      respond_with(@markets)
+    else
+      @markets = Market.all
+      respond_with(@markets)
+    end
+
   end
 
   def show
