@@ -1,28 +1,53 @@
-== README
+# Hello ( Introduction ) !
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project aims to be a platform where markets can post their products / prices. Where are found according to the user's proximity.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+We accept forks!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# How start ?
+
+It's simple! clone current branch.
+
+Terminal
+ ```sh
+git clone https://github.com/breim/mercady.git
+```
+
+Now you need create database configuration. We uses mysql on development,however in procution we uses postgresql.
+
+```sh
+cd mercady/config
+touch database.yml
+```
+
+Now edit database.yml with your configurations like this
+```sh
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: YOUR USER DB HERE
+  password: YOUR PASSWORD DB HERE
+  socket: /var/run/mysqld/mysqld.sock
+
+  development:
+  <<: *default
+  database: mercady_development
+```
+After do this step return to mercady root app and run these ones commands
+```sh
+bundle install
+rake db:create
+rake db:migrate
+```
+
+Yeah! everything ok ?
+RUN RUN FOREST!
+```sh
+rails server
+```
+
+And now access in your browser http://0.0.0.0:3000
+
+##### Be happy :)
