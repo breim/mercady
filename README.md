@@ -10,7 +10,7 @@ We accept forks!
 It's simple! clone current branch.
 
 Terminal
- ```sh
+```sh
 git clone https://github.com/breim/mercady.git
 ```
 
@@ -22,6 +22,7 @@ touch database.yml
 ```
 
 Now edit database.yml with your configurations like this
+
 ```sh
 default: &default
   adapter: mysql2
@@ -32,6 +33,7 @@ default: &default
   socket: /var/run/mysqld/mysqld.sock
 ```
 After do this step return to mercady root app and run these ones commands
+
 ```sh
 bundle install
 rake db:create
@@ -40,6 +42,7 @@ rake db:migrate
 
 Yeah! everything ok ?
 RUN RUN FOREST!
+
 ```sh
 rails server
 ```
