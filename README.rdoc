@@ -30,10 +30,6 @@ default: &default
   username: YOUR USER DB HERE
   password: YOUR PASSWORD DB HERE
   socket: /var/run/mysqld/mysqld.sock
-
-  development:
-  <<: *default
-  database: mercady_development
 ```
 After do this step return to mercady root app and run these ones commands
 ```sh
